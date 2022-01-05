@@ -1,4 +1,5 @@
 define([
+    '../libs/buffers',
     '../core/file_system',
     '../core/api_error',
     '../core/file_flag',
@@ -8,7 +9,7 @@ define([
     '../generic/preload_file',
     '../core/global',
     '../core/node_fs'
-], function (file_system, api_error, file_flag, util, file, node_fs_stats, preload_file, global, fs) {
+], function (buffers,file_system, api_error, file_flag, util, file, node_fs_stats, preload_file, global, fs) {
     'use strict';
 
     const { BaseFileSystem } = file_system;
@@ -18,6 +19,7 @@ define([
     const { BaseFile }  = file;
     const { Stats }  = node_fs_stats;
     const {PreloadFile}  = preload_file;
+    const { Buffer } = buffers;
 
     /**
      * @hidden

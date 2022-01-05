@@ -1,15 +1,17 @@
 define([
+    '../libs/buffers',
     '../core/file',
     '../core/node_fs_stats',
     '../core/api_error',
     '../core/node_fs',
     '../core/util'
-], function (file, Stats, api_error, fs, util) {
+], function (buffers,file, Stats, api_error, fs, util) {
     'use strict';
 
     const { BaseFile } = file;
     const { ApiError, ErrorCode } = api_error;
     const { emptyBuffer } = util;
+    const { Buffer } = buffers;
 
     /**
      * An implementation of the File interface that operates on a file that is

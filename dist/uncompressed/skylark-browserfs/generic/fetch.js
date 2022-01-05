@@ -1,4 +1,7 @@
-define(['../core/api_error'], function (api_error) {
+define([
+    '../libs/buffers',
+    '../core/api_error'
+], function (buffers,api_error) {
     'use strict';
 
     /**
@@ -7,6 +10,7 @@ define(['../core/api_error'], function (api_error) {
     const { ApiError, ErrorCode }= api_error;
 
     const fetchIsAvailable = (typeof (fetch) !== "undefined" && fetch !== null);
+    const { Buffer } = buffers;
 
     function fetchFileAsync(p, type, cb) {
         let request;

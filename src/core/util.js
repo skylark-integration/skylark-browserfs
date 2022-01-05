@@ -1,13 +1,13 @@
 define([
-    '../libs/buffer',
+    '../libs/buffers',
     './api_error',
     './levenshtein',
     '../libs/path'
-], function (buffer,api_error, levenshtein, path) {
+], function (buffers,api_error, levenshtein, path) {
     'use strict';
 
     const { ErrorCode, ApiError } = api_error;
-    const {Buffer} = buffer;
+    const {Buffer} = buffers;
 
     function deprecationMessage(print, fsName, opts) {
         if (print) {

@@ -1,15 +1,17 @@
 define([
+    '../libs/buffers',
     './api_error',
     './file_flag',
     '../libs/path',
     './node_fs_stats',
     '../generic/setImmediate'
-], function (api_error, file_flag, path, node_fs_stats, setImmediate) {
+], function (buffers,api_error, file_flag, path, node_fs_stats, setImmediate) {
     'use strict';
 
     const { ApiError, ErrorCode } = api_error;
     const { FileFlag } = file_flag;
     const {Stats} = node_fs_stats;
+    const { Buffer } = buffers;
 
     /** Used for unit testing. Defaults to a NOP. */
     let wrapCbHook = function (cb, numArgs) {

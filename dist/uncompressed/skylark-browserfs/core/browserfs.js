@@ -1,6 +1,6 @@
 define([
     '../libs/process',
-    '../libs/buffer',
+    '../libs/buffers',
     './node_fs',
     '../libs/path',
     '../generic/emscripten_fs',
@@ -8,10 +8,10 @@ define([
     './util',
     './api_error',
     '../generic/setImmediate'
-], function (process,buffer, fs, path, EmscriptenFS, Backends, BFSUtils, Errors, setImmediate) {
+], function (process,buffers, fs, path, EmscriptenFS, Backends, BFSUtils, Errors, setImmediate) {
     'use strict';
 
-    const {Buffer} = buffer;
+    const {Buffer} = buffers;
     
     /**
      * BrowserFS's main module. This is exposed in the browser via the BrowserFS global.

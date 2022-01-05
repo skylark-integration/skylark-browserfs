@@ -1,4 +1,5 @@
 define([
+    '../libs/buffers',
     '../generic/preload_file',
     '../core/file_system',
     '../core/node_fs_stats',
@@ -7,7 +8,7 @@ define([
 ///    'dropbox_bridge',
     '../generic/setImmediate',
     '../libs/path'
-], function (preload_file, file_system, node_fs_stats, api_error, util,  setImmediate, path) {
+], function (buffers,preload_file, file_system, node_fs_stats, api_error, util,  setImmediate, path) {
     'use strict';
 
     const { BaseFileSystem } = file_system;
@@ -18,6 +19,8 @@ define([
     const { dirname } =  path;
 
     const { PreloadFile} = preload_file;
+
+    const {Buffer} = buffers;
 
 
     /**

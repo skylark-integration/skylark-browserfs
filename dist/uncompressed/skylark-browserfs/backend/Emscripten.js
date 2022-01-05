@@ -1,10 +1,11 @@
 define([
+    '../libs/buffers',
     '../core/file_system',
     '../core/node_fs_stats',
     '../core/file',
     '../core/util',
     '../core/api_error'
-], function (file_system, node_fs_stats, file, util, api_error) {
+], function (buffers,file_system, node_fs_stats, file, util, api_error) {
     'use strict';
 
     const { SynchronousFileSystem } = file_system;
@@ -12,6 +13,7 @@ define([
     const { BaseFile } = file;
     const { uint8Array2Buffer, buffer2Uint8array } = util;
     const { ApiError, ErrorCode, ErrorStrings } = api_error;
+    const { Buffer } = buffers;
 
     /**
      * @hidden

@@ -1,5 +1,9 @@
-define(function () {
+define([
+    '../libs/buffers'
+],function (buffers) {
     'use strict';
+    const { Buffer } = buffers;
+
     /**
      * Indicates the type of the given file. Applied to 'mode'.
      */

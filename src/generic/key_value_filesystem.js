@@ -1,4 +1,5 @@
 define([
+    '../libs/buffers',
     '../core/file_system',
     '../core/api_error',
     '../core/node_fs_stats',
@@ -6,7 +7,7 @@ define([
     '../generic/inode',
     '../generic/preload_file',
     '../core/util'
-], function (file_system, api_error, node_fs_stats, path, Inode, preload_file, util) {
+], function (buffers,file_system, api_error, node_fs_stats, path, Inode, preload_file, util) {
     'use strict';
 
     const { BaseFileSystem, SynchronousFileSystem } = file_system;
@@ -14,6 +15,7 @@ define([
     const { FileType } = node_fs_stats;
     const { emptyBuffer } = util;
     const { PreloadFile} = preload_file;
+    const { Buffer } = buffers;
 
 
     /**

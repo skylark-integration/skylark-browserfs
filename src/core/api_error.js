@@ -1,4 +1,8 @@
-define(function () {
+define([
+  '../libs/buffers'
+],function (buffers) {
+    const { Buffer } = buffers;
+
     /**
      * Standard libc error codes. Add more to this enum and ErrorStrings as they are
      * needed.

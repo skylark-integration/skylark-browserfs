@@ -1,9 +1,10 @@
 define([
+    '../libs/buffers',
     './api_error',
     './file_flag',
     '../libs/path',
     './util'
-], function (api_error, file_flag, path, util) {
+], function (buffers,api_error, file_flag, path, util) {
     'use strict';
 
     const { ApiError, ErrorCode } = api_error;

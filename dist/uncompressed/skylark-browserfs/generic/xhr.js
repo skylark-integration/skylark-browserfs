@@ -1,7 +1,8 @@
 define([
+    '../libs/buffers',
     '../core/util',
     '../core/api_error'
-], function (util, api_error) {
+], function (buffers,util, api_error) {
     'use strict';
     /**
      * Contains utility methods for performing a variety of tasks with
@@ -9,6 +10,7 @@ define([
      */
     const { isIE, emptyBuffer } = util;
     const { ApiError, ErrorCode } = api_error;
+    const { Buffer } = buffers;
 
     const xhrIsAvailable = (typeof (XMLHttpRequest) !== "undefined" && XMLHttpRequest !== null);
     function asyncDownloadFileModern(p, type, cb) {

@@ -1,9 +1,11 @@
 define([
+    '../libs/buffers',
     '../core/node_fs_stats'
-], function (node_fs_stats) {
+], function (buffers,node_fs_stats) {
     'use strict';
 
     const  { Stats, FileType } = node_fs_stats;
+    const { Buffer } = buffers;
 
     /**
      * Generic inode definition that can easily be serialized.

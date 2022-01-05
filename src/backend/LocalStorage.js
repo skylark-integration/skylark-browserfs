@@ -1,15 +1,15 @@
 define([
+    '../libs/buffers',
     '../generic/key_value_filesystem',
     '../core/api_error',
-    '../core/global',
-    "../libs/buffer"
-], function (key_value_filesystem, api_error, global,buffer) {
+    '../core/global'
+], function (buffers,key_value_filesystem, api_error, global) {
     'use strict';
 
     const { SyncKeyValueFileSystem, SimpleSyncRWTransaction } = key_value_filesystem;
     const { ApiError, ErrorCode } = api_error;
 
-    const { Buffer} = buffer;
+    const { Buffer} = buffers;
 
     /**
      * Some versions of FF and all versions of IE do not support the full range of
