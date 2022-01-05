@@ -1,0 +1,23 @@
+{
+  "name": "skylark-browserfs",
+  "version": "0.9.0",
+  "description": "A version of browserfs that ported to running on skylarkjs.",
+  "keywords": [
+    "skylark",
+    "skylarkjs",
+    "files",
+    "browserfs"
+  ],
+  "dependencies": {
+    "skylark-langx-async": "git+https://github.com/skylarklangx/skylark-langx-async.git",
+    "skylark-langx-ns": "git+https://github.com/skylarklangx/skylark-langx-ns.git"
+  },
+  "scripts": {
+    "build": "slib build ."
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skylark-integration/skylark-browserfs.git"
+  }
+}

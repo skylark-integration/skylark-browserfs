@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["define","browserfs"],"mappings":";;;;;;;AAAAA,QACI,oBACF,SAASC,GACP,OAAOA","file":"../main.js","sourcesContent":["define([\n    \"./core/browserfs\"\n],function(browserfs){\n    return browserfs;\n});"]}

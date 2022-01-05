@@ -81,7 +81,6 @@ export class FileFlag {
   public isWriteable(): boolean {
     return this.flagStr.indexOf('w') !== -1 || this.flagStr.indexOf('a') !== -1 || this.flagStr.indexOf('+') !== -1;
   }
-
   /**
    * Returns true if the file mode should truncate.
    */
