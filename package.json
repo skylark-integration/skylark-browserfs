@@ -9,8 +9,11 @@
     "browserfs"
   ],
   "dependencies": {
-    "skylark-langx-async": "git+https://github.com/skylarklangx/skylark-langx-async.git",
-    "skylark-langx-ns": "git+https://github.com/skylarklangx/skylark-langx-ns.git"
+    "skylark-langx-paths": "git+https://github.com/skylark-langx/skylark-langx-paths.git",
+    "skylark-langx-binary": "git+https://github.com/skylark-langx/skylark-langx-binary.git",
+    "skylark-langx-executive": "git+https://github.com/skylark-langx/skylark-langx-executive.git",
+    "skylark-langx-async": "git+https://github.com/skylark-langx/skylark-langx-async.git",
+    "skylark-langx-ns": "git+https://github.com/skylark-langx/skylark-langx-ns.git"
   },
   "scripts": {
     "build": "slib build ."
