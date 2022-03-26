@@ -1,4 +1,5 @@
 define([
+    "skylark-langx-ns",
     '../libs/process',
     '../libs/buffers',
     './node_fs',
@@ -8,7 +9,7 @@ define([
     './util',
     './api_error',
     '../generic/setImmediate'
-], function (process,buffers, fs, path, EmscriptenFS, Backends, BFSUtils, Errors, setImmediate) {
+], function (skylark,process,buffers, fs, path, EmscriptenFS, Backends, BFSUtils, Errors, setImmediate) {
     'use strict';
 
     const {Buffer} = buffers;
@@ -141,7 +142,7 @@ define([
         }
     }
 
-    return {
+    return skylark.attach("intg.BrowserFS",{
         install: install,
         registerFileSystem: registerFileSystem,
         BFSRequire: BFSRequire,
@@ -152,5 +153,5 @@ define([
         "FileSystem" : Backends,
         Errors,
         setImmediate
-    };
+    });
 });

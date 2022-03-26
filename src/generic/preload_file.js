@@ -5,11 +5,12 @@ define([
     '../core/api_error',
     '../core/node_fs',
     '../core/util'
-], function (buffers,file, Stats, api_error, fs, util) {
+], function (buffers,file, node_fs_stats, api_error, fs, util) {
     'use strict';
 
     const { BaseFile } = file;
     const { ApiError, ErrorCode } = api_error;
+    const {Stats} = node_fs_stats;
     const { emptyBuffer } = util;
     const { Buffer } = buffers;
 
